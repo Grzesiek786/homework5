@@ -22,8 +22,11 @@
 
 .house-card {
   width: 25%;
-}
 
+  p .status {
+    text-transform: uppercase;
+  }
+}
 
 .latest-house {
   display: flex;

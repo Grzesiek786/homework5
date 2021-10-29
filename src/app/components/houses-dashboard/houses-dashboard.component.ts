@@ -10,7 +10,6 @@ import { HouseService } from '../../services/house.service';
 export class HousesDashboardComponent implements OnInit {
   public filteredHouses: House[] = [];
   public latestReservedHouse: House;
-  
 
   private houses: House[];
 
