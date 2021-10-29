@@ -1,0 +1,30 @@
+.dashboard-filters {
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    background-color: white;
+
+    &-left {
+      border-radius: 10px 0 0 10px;
+    }
+
+    &-right {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+}
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.house-card {
+  width: 25%;
+}
+
+
+.latest-house {
+  display: flex;
+}

@@ -1,0 +1,20 @@
+<div class="dashboard-filters">
+  <button class="btn btn-left" (click)="displayAll()">Wyświetl wszystkie</button>
+  <button class="btn" (click)="displayAbove(900000)">Wyświetl powyżej 900 tys.</button>
+  <button class="btn btn-right" (click)="displayBelow(700000)">Wyświetl poniżej 700 tys.</button>
+</div>
+
+<div class="dashboard-container">
+  <app-house-card
+    class="house-card"
+    *ngFor="let house of filteredHouses"
+    [house]="house"
+    [isLatestReserved]="
+      latestReservedHouse && latestReservedHouse.id === house.id
+    "
+    (houseReserved)="houseReserved($event)"
+    appColorsStatus
+  >
+    <p class="status">Status: {{ house.status | uppercase }}</p>
+  </app-house-card>
+</div>
