@@ -1,10 +1,12 @@
 <div class="card-container" [ngClass]="{ 'green-border': isLatestReserved }">
   <img [src]="house.photoSource" alt="house.street" />
-  <p>Miejscowość: {{ house.address.city }}</p>
-  <p>Adres: {{ address }}</p>
-  <p>Powierzchnia: {{ house.surface }}</p>
-  <p>Cena: {{ house.price | localeCurrency }}</p>
-  <!-- <p>Status: {{ house.status | uppercase }}</p> -->
-  <ng-content></ng-content>
-  <button class="btn" (click)="reservedHouse()">Zarezerwuj</button>
+  <div class="card">
+    <p>Miejscowość: {{ house.address.city }}</p>
+    <p>Adres: {{ address }}</p>
+    <p>Powierzchnia: {{ house.surface }}</p>
+    <p>Cena: {{ house.price | localeCurrency }}</p>
+    <p>Status: <span appColorsStatus [houseStatus]="house.status">{{ house.status | uppercase }}</span></p>
+    <!-- <p>Status: <ng-content></ng-content></p> -->
+    <button class="btn" (click)="reservedHouse()">Zarezerwuj</button>
+  </div>
 </div>

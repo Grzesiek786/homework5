@@ -12,9 +12,7 @@
     [isLatestReserved]="
       latestReservedHouse && latestReservedHouse.id === house.id
     "
-    (houseReserved)="houseReserved($event)"
-    appColorsStatus
+    (houseReserved)="houseReserved($event)" 
   >
-    <p>Status: <span class="status">{{ house.status}}</span></p>
   </app-house-card>
 </div>
