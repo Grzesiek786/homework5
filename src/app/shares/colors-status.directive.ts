@@ -11,7 +11,6 @@ export class ColorsStatusDirective implements OnInit {
   constructor(private render: Renderer2, private elementRef: ElementRef) {}
 
   ngOnInit(): void {
-    console.log(this.houseStatus === HouseStatus.FOR_RENT);
     if(this.houseStatus === HouseStatus.FOR_RENT) {
       this.render.setStyle(this.elementRef.nativeElement, 'color', 'red');
     }

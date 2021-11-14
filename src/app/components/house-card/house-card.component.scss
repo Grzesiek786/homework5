@@ -17,10 +17,28 @@
     box-shadow: 0 0 5px 0 rgba(50, 205, 50, 0.7);
   }
 
-  .btn {
-    background-color: #000;
-    color: #fff;
-    border-radius: 10px;
-    border: none;
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      background-color: #000;
+      color: #fff;
+      border-radius: 10px;
+      border: none;
+    }
+  }
+
+  .img-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+
+    img {
+      width: 30%;
+      height: 60px;
+      border-radius: 5px;
+    }
   }
 }

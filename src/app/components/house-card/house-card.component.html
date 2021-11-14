@@ -7,6 +7,15 @@
     <p>Cena: {{ house.price | localeCurrency }}</p>
     <p>Status: <span appColorsStatus [houseStatus]="house.status">{{ house.status | uppercase }}</span></p>
     <!-- <p>Status: <ng-content></ng-content></p> -->
-    <button class="btn" (click)="reservedHouse()">Zarezerwuj</button>
+    <ng-container [ngTemplateOutlet]="houseAvailability"></ng-container>
+    <div class="buttons">
+      <button class="btn" (click)="reservedHouse()">Zarezerwuj</button>
+      <button class="btn" *ngIf="house.photosSource.length > 0" (click)="morePhotos()">{{ imagesAvailability === false ? 'Więcej zdjęć' : 'Ukryj zdjęcia'}}</button>
+    </div>
+    <ng-template #houseAvailability>
+      <div class="img-container" *ngIf="imagesAvailability">
+        <img (click)="showPhoto()" *ngFor="let image of house.photosSource" [src]="image" alt="Domy">
+      </div>
+    </ng-template>
   </div>
 </div>

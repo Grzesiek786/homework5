@@ -7,6 +7,7 @@ export interface House {
   status: HouseStatus;
   address: Address;
   photoSource: string;
+  photosSource: string[];
 }
 
 interface Address {

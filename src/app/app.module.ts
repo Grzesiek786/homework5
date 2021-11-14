@@ -9,11 +9,21 @@ import { HouseCardComponent } from './components/house-card/house-card.component
 import { HousesDashboardComponent } from './components/houses-dashboard/houses-dashboard.component';
 import { LocaleCurrencyPipe } from './shares/locale-currency.pipe';
 import { ColorsStatusDirective } from './shares/colors-status.directive';
+import { DialogComponent } from './dialog/dialog.component';
+import { PopupComponent } from './dialog/popup/popup.component';
 
 registerLocaleData(localePL);
 
 @NgModule({
-  declarations: [AppComponent, HouseCardComponent, HousesDashboardComponent, LocaleCurrencyPipe, ColorsStatusDirective],
+  declarations: [
+    AppComponent,
+    HouseCardComponent,
+    HousesDashboardComponent,
+    LocaleCurrencyPipe,
+    ColorsStatusDirective,
+    DialogComponent,
+    PopupComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [
     {
